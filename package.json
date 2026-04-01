@@ -96,6 +96,16 @@
       "types": "./dist/storage.d.ts",
       "import": "./dist/storage.mjs",
       "default": "./dist/storage.js"
+    },
+    "./map-groupby": {
+      "types": "./dist/map-groupby.d.ts",
+      "import": "./dist/map-groupby.mjs",
+      "default": "./dist/map-groupby.js"
+    },
+    "./object-groupby": {
+      "types": "./dist/object-groupby.d.ts",
+      "import": "./dist/object-groupby.mjs",
+      "default": "./dist/object-groupby.js"
     }
   },
   "keywords": [],
