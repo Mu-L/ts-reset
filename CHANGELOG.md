@@ -1,5 +1,17 @@
 # @total-typescript/ts-reset
 
+## 0.7.0
+
+### Minor Changes
+
+- 9c9fddc: Add `clone-node` entrypoint that overrides `Node.cloneNode` to return `this` instead of `Node`, preserving the specific element type through cloning. Available standalone via `@total-typescript/ts-reset/clone-node` or as part of `@total-typescript/ts-reset/dom`.
+- 83c90e4: Add non-empty tuple return types for `Map.groupBy` and `Object.groupBy`, so accessing `group[0]` is safely typed under `noUncheckedIndexedAccess`
+- 07c1139: Remove `promise-catch` from `recommended` due to incompatibility with promise unions (`Promise<A> | Promise<B>`). The entrypoint is still available as an opt-in import via `@total-typescript/ts-reset/promise-catch`.
+
+### Patch Changes
+
+- 4c9bc7a: Fix `.filter(Boolean)` silently removing type safety when used inline in function arguments
+
 ## 0.6.1
 
 ### Patch Changes
