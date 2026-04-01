@@ -1,3 +1,28 @@
+/**
+ * Changes the `reason` parameter of `.then()` and `.catch()` rejection
+ * handlers from `any` to `unknown`, forcing explicit type narrowing.
+ *
+ * **Known limitation:** This adds a second overload to `.then()` and
+ * `.catch()` (the original from lib.es5.d.ts uses `reason: any`).
+ * TypeScript cannot reconcile multiple overloads across union members,
+ * so calling `.then()` or `.catch()` on a union of promises like
+ * `Promise<number> | Promise<void>` will fail with:
+ *
+ *   "This expression is not callable. Each member of the union type
+ *    '...' has signatures, but none of those signatures are compatible
+ *    with each other."
+ *
+ * Workaround: use `Promise<A | B>` instead of `Promise<A> | Promise<B>`.
+ *
+ * This is unfixable with TypeScript's current type system — interface
+ * declaration merging can only add overloads, never replace them.
+ * See https://github.com/mattpocock/ts-reset/issues/209
+ *
+ * This entrypoint is NOT included in `recommended` for this reason.
+ * Import it explicitly if you want this behavior:
+ *
+ *   import "@total-typescript/ts-reset/promise-catch";
+ */
 interface Promise<T> {
   /**
    * Attaches callbacks for the resolution and/or rejection of the Promise.
