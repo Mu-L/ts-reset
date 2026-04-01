@@ -11,6 +11,7 @@
     "ci": "turbo build check-exports lint lint-pkg-json format:check",
     "check-exports": "check-export-map",
     "lint": "tsc",
+    "typecheck": "tsc",
     "lint-pkg-json": "tsx scripts/lint.ts",
     "release": "turbo run publish",
     "publish": "changeset publish",
