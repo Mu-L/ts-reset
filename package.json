@@ -118,7 +118,7 @@
     "prettier": "^3.2.5",
     "tsx": "^3.14.0",
     "turbo": "^1.13.3",
-    "typescript": "^5.5.4"
+    "typescript": "^6.0.2"
   },
   "prettier": {
     "arrowParens": "always",
