@@ -98,6 +98,11 @@
       "import": "./dist/storage.mjs",
       "default": "./dist/storage.js"
     },
+    "./clone-node": {
+      "types": "./dist/clone-node.d.ts",
+      "import": "./dist/clone-node.mjs",
+      "default": "./dist/clone-node.js"
+    },
     "./map-groupby": {
       "types": "./dist/map-groupby.d.ts",
       "import": "./dist/map-groupby.mjs",
